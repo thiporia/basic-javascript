@@ -11,6 +11,8 @@ Javascript의 기본을 올리고 정리한다.
 5. Javascript 주석. (05-comment)
 6. Javascript 에러. (06-error)
 7. Javascript 변수. (07-variables)
+8. Javascript 문자열. (08-string)
+9. Javascript 배열. (09-array)
 
 ### 해당 자료를 만드는데 참고한 페이지
 

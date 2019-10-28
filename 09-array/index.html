@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>09-array</title>
+  </head>
+  <body>
+    <div>
+      <p>안녕! 난 paragraph 태그인 p야!</p>
+    </div>
+  </body>
+  <script type="text/javascript">
+    // javascript here
+    // 배열은 원소를 서로 다른 타입을 지닐 수 있습니다.
+    var brands = ["Samsung", "Kia", "SKT", "Microsoft"];
+    var complex = [400, "coffee", true, [1, 2, 3]];
+
+    brands[1]; // 'Kia'
+    brands[1] = "Hyundai"; // ['Samsung', 'Hyundai', 'SKT', 'Microsoft']
+
+    complex[3][0]; // 1
+
+    brands.length; // 4
+
+    // ## 배열 관련 메소드
+    var string = "seonyeong,sunny,thiporia,bomi";
+    var nameArr = string.split(","); // nameArr = ['seonyeong', 'sunny', 'thiporia', 'bomi']
+
+    var joinStr = nameArr.join(":"); // seonyeong:sunny:thiporia:bomi
+
+    nameArr.toString(); // seonyeong,sunny,thiporia,bomi
+
+    nameArr.push("bbom"); // ['seonyeong', 'sunny', 'thiporia', 'bomi', 'bbom']
+    nameArr.pop(); // ['seonyeong', 'sunny', 'thiporia', 'bomi']
+
+    nameArr.unshift("bbom"); // ['bbom', 'seonyeong', 'sunny', 'thiporia', 'bomi']
+    nameArr.shift(); // ['seonyeong', 'sunny', 'thiporia', 'bomi']
+  </script>
+</html>
