@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>07-variables</title>
+  </head>
+  <body>
+    <div>
+      <p>안녕! 난 paragraph 태그인 p야!</p>
+    </div>
+  </body>
+  <script type="text/javascript">
+    // javascript here
+    /*
+      * MDN 소개에 따르면
+      변수란, 
+      숫자(합계나 계산에 사용되는) 또는 문자열(문장의 일부로 사용되는)과 같은 값의 컨테이너입니다. 
+      그러나 변수에 대한 한 가지 특별한 점은 포함된 값이 변경될 수 있다는 것입니다.
+      
+      변수 명명법 : 일반적으로 라틴 문자(0-9, a-z, A-Z)와 밑줄 문자를 사용해야 합니다.
+      안전한 명명법은 소위 "lower camel case"(소문자 낙타 문법) 입니다. 
+      여러 단어를 하나로 묶고 첫 단어의 시작은 소문자를 사용하며 그다음 단어의 시작은 대문자로 사용합니다. 
+      우리는 지금까지 이 문서에서 변수 이름에 이 방법을 사용해 왔습니다.
+    */
+
+    // 1. 변수 선언 (var 말고도 es6에서는 let, const가 존재합니다.)
+    var myName;
+    var myAge;
+
+    // 2. 변수 초기화
+    myName = "Chris"; //var myName = 'Chris'; 동시에도 가능!
+    myAge = 37;
+
+    // 3. 변수 재지정
+    myName = "Bob";
+    myAge = 40;
+
+    // 4. 변수의 종류
+    // 숫자 : 부동소수점과 일반 정수를 동시에 사용가능 "" 등으로 감싸지 않습니다.
+    var myAge = 17;
+
+    // 문자열 : '' 또는 "" 로 감싸주어야 합니다.
+    var myName = "Thiporia";
+
+    // Boolean : true / false
+    var isEmpty = false;
+
+    // 배열
+    var ages = [10, 20, 30, 40];
+    var names = ["lucy", "sunny", "bomi"];
+
+    ages[1]; // 20
+    names[0]; // lucy
+
+    // 객체
+    var myEnv = { laptop: "MacBook", language: "Javascript" };
+
+    myEnv.laptop; // MacBook
+
+    // 지정되지 않은 타입 : 타입자체를 선언과 동시에 강제로 정해주는 것이 아니기 때문에 언제든 타입이 바뀔 수 있고, 다른 타입의 값으로 재 지정 할 수 있다.
+    var myString = "Hello";
+    var myNumber = "500"; // oops, this is still a string
+    typeof myNumber; // string
+    // console.log(typeof myNumber);
+    myNumber = 500; // much better — now this is a number
+    typeof myNumber; // number
+    // console.log(typeof myNumber);
+  </script>
+</html>

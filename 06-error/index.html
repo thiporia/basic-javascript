@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>06-error</title>
+  </head>
+  <body>
+    <div>
+      <p>안녕! 난 paragraph 태그인 p야!</p>
+    </div>
+  </body>
+  <script type="text/javascript">
+    // javascript here
+    /*
+      error는 두 종류
+      1. syntax 에러 : 실 구문 에러 및 프로그램이 중지되고 화면에 에러 정보가 노출된다.(콜스택)
+      2. logic 에러 : 구문에는 문제가 없이 작성되어 있지만, 원하는 결과가 도출되지 않는다.
+    */
+
+    /*
+      1. syntax에러(주석 밑의 코드를 주석 해제 후 실행하면 다음과 같은 에러가 나온다.)
+      index.html:23 Uncaught TypeError: document.queryselector is not a function
+      at index.html:23 
+      해당 함수를 찾을 수 없다는 에러인데, 구문에러로 querySelector로 변경하면 에러는 사라진다.
+    */
+    document.queryselector("div").addEventListener("click", handleDiv);
+    // document.querySelector("div").addEventListener("click", handleDiv);
+
+    /*
+      2. logic 에러(원하는 결과는 1~10까지 화면에 출력이지만 결과는 0~9가 출력된다.)
+    */
+    for (let i = 0; i < 10; i++) {
+      console.log(i);
+    }
+
+    function handleDiv() {
+      console.log("click!");
+    }
+  </script>
+</html>
