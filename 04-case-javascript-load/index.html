@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- 
+      async를 이용해 javascript파일 로드를 화면을 렌더링 하는 것과 분리 
+      text1.js , text2.js, test3.js의 로드 순서 보장하지 않음.
+    -->
+    <script async src="../js/test1.js"></script>
+    <script async src="../js/test2.js"></script>
+    <script async src="../js/test3.js"></script>
+
+    <!-- 
+      defer를 이용해 javascript 파일 로드를 화면을 렌더링 하는 것과 분리
+      text1.js -> text2.js -> text3.js의 로드 순서 보장
+     -->
+    <script defer src="../js/test1.js"></script>
+    <script defer src="../js/test2.js"></script>
+    <script defer src="../js/test3.js"></script>
+
+    <title>04-case-javascript-load</title>
+  </head>
+  <body>
+    <div>
+      <p>안녕! 난 paragraph 태그인 p야!</p>
+    </div>
+  </body>
+  <script type="text/javascript"></script>
+</html>

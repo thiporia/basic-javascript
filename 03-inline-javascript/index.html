@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>03-inline-javascript</title>
+  </head>
+  <body>
+    <div>
+      <p>안녕! 난 paragraph 태그인 p야!</p>
+      <!-- inline 자바스크립트 함수 호출. -->
+      <button onClick="handleButton()">눌러봐!</button>
+    </div>
+  </body>
+  <script type="text/javascript">
+    // javascript는 요기
+    // inline으로 대체하여 제거.
+    //document.querySelector("#button").addEventListener("click", handleButton);
+
+    function handleButton() {
+      // ##
+      alert("버튼을 눌렀어요!");
+      createParagraph();
+    }
+
+    function createParagraph() {
+      let para = document.createElement("p");
+      para.textContent = "너 버튼을 눌렀구나!?";
+      document.body.appendChild(para);
+    }
+  </script>
+</html>
