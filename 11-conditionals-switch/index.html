@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>11-conditionals-switch</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      /* 
+        switch case 문은 다음과 같은 특징이 있습니다.
+        switch(expression) <= 괄호 안에 특정 값 또는 표현식이 들어갈 수 있습니다. 연산이 들어갈 수도 있죠!
+        case SELECT: <= case가 선택되는 값이 SELECT에 들어갑니다. 아래 예에서는 요일의 축약어가 들어갔죠
+        break; <= 이 친구는 필수.. 라고 해야겠죠? 만약 MON로 오늘을 초기화하고 MON에 break를 빼보세요! 어떤결과가 나올까요? 정답은 월요일이군요! 화요일이군요! 가 출력됩니다.
+                  무슨 얘기냐구요!? break;는 해당 case를 수행하고 끝낸다는 의미가 있기때문이죠! 원하는 case만 수행하고 싶다면 절대 빼먹어선 안되요!
+        default: <= 이 친구는 위에 해당하는 선택지가 없는 경우 수행되는 부분이에요 음 .. if문에선 else와 같달까요? 마찬가지로 없어도 되지만 switch에서는 꼭 써주는게 관례인 듯 합니다.
+      */
+      function switchCondition() {
+        let today = "SUN";
+
+        switch (today) {
+          case "MON":
+            console.log("월요일이군요!");
+            break;
+          case "TUE":
+            console.log("화요일이군요!");
+            break;
+          case "WED":
+            console.log("수요일이군요!");
+            break;
+          case "THU":
+            console.log("목요일이군요!");
+            break;
+          case "FRI":
+            console.log("금요일이군요!");
+            break;
+          case "SAT":
+            console.log("토요일이군요!");
+            break;
+          case "SUN":
+            console.log("일요일이군요!");
+            break;
+          default:
+            console.log("도대체 무슨 요일이죠!? 맙소사 세상에 무슨일이...");
+        }
+      }
+
+      switchCondition(); // 일요일이군요!
+    </script>
+  </body>
+</html>

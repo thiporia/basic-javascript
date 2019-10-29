@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>13-looping-for</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      /* 
+        반복문의 꽃 for
+        먼저 MDN 기준으로보면서 작성해야겠어요!
+        for (initializer; exit-condition; final-expression) {
+          // code to run
+        }
+        initializer : 카운터 변수를 선언하는 곳 정도인거 같아요!
+        exit-condition : 탈출 조건이겠네요! 영원히 루프를 돌 순 없으니까요.
+        final-expression : 반복될때마다 마지막에 수행되는 표현식인 것 같아요.
+
+        자 그럼 만들어보죠!
+        (*각 결과 주석은 개행을 공백으로 작성했습니다.)
+      */
+      function for1() {
+        for (let cnt = 0; cnt < 10; cnt++) {
+          console.log(cnt);
+        }
+      }
+
+      for1(); // 0 1 2 3 4 5 6 7 8 9
+
+      /* 
+        반복문 내부에 조건문도 가능합니다!
+       */
+      function for2() {
+        for (let cnt = 1; cnt <= 10; cnt++) {
+          if (cnt % 2 === 0) {
+            console.log(cnt + "는 짝수");
+          }
+        }
+      }
+
+      for2(); // 2는 짝수 4는 짝수 6는 짝수 8는 짝수 10는 짝수
+
+      /* 
+        숫자 4를 출력하는 것을 제외해봅시다.
+      */
+      function for3() {
+        for (let cnt = 0; cnt < 10; cnt++) {
+          // cnt !== 4 ? console.log(cnt) : ""; // 3항 연산자를 사용해 4가 아닌 경우는 출력 4인 경우는 ""로 아무것도 하지 않습니다.
+          // cnt === 4 ? "" : console.log(cnt); // 이 방법도 가능해요!
+
+          /* 
+            이 곳은 조금 설명이 필요할 것 같습니다.
+            continue; 라는게 등장했는데, continue의 경우는 이번 조건은 건너띄고 다음으로 넘어가라입니다.
+            하지만 조심해야할게 지금과 같이 해당 조건문을 만나서 continue;가 걸린다면 그 위에 코드는 다 수행된다는 점입니다.
+          */
+          if (cnt === 4) {
+            continue;
+          }
+          console.log(cnt);
+        }
+      }
+
+      for3(); // 0 1 2 3 5 6 7 8 9
+
+      /* 
+        원하는 값을 찾은 경우 반복을 종료해봅시다!
+      */
+      function for4() {
+        let searchValue = 4;
+
+        /* 
+          이 곳도 설명이 조금 필요하겠군요.
+          break; 문의 경우는 이제 반복문을 그만해라. 라는 뜻으로 지금의 경우는 4라는 값을 찾았기 때문에 (cnt와 searchValue가 같기 때문)에 해당 반복문을 종료한 것입니다.
+          보통 우리는 특정 값을 찾는 탐색의 경우 해당 반복문을 쓸 수 있습니다. 요지는 찾았을 경우 다음 반복을 할 필요가 없는 것이죠.
+          그럴 때 우리는 break;를 사용할 수 있습니다.
+        */
+        for (let cnt = 0; cnt < 10; cnt++) {
+          if (cnt === searchValue) {
+            break;
+          }
+          console.log(cnt);
+        }
+      }
+
+      for4(); // 0 1 2 3
+
+      /*
+        밑으로 나오는 for 예제는 MDN 순서에는 없지만 남깁니다.
+      */
+      function for5() {
+        const arr = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
+
+        for (let e of arr) {
+          console.log(e);
+        }
+      }
+
+      for5(); // MON TUE WED THU FRI SAT SUN
+
+      function for6() {
+        const obj = {
+          name: "thiporia",
+          age: 23,
+          sex: "male"
+        };
+
+        for (let e in obj) {
+          console.log(e + " " + obj[e]); // e는 키를 의미
+        }
+      }
+
+      for6(); // name thiporia  age 23  sex male;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>12-conditionals-ternary or conditional operator</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // ## 이름이 길지만 삼항연산자라는 친구입니다. 제가 애정하는 아이죠 : )
+      function toco() {
+        1 + 1 === 2 ? console.log("참") : console.log("거짓");
+      }
+
+      /* 
+        위에 삼항연산자를 if로 변경해볼까요?
+        꽤나 많이 늘어났죠? 이렇게 때문에 조금 간단한 경우는 삼항연산자를 많이 씁니다.
+      */
+      function ifCond() {
+        if (1 + 1 === 2) {
+          console.log("참");
+        } else {
+          console.log("거짓");
+        }
+      }
+
+      toco(); // 참
+
+      ifCond(); // 참
+    </script>
+  </body>
+</html>
